@@ -6,7 +6,9 @@ import * as schema from './schema.ts'
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL!,
-  ssl: { rejectUnauthorized: false },
+  ssl: process.env.DATABASE_URL?.includes('localhost')
+  ? false
+  : { rejectUnauthorized: false },
 })
 
 export const db = drizzle(pool, { schema })
