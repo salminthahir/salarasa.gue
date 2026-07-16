@@ -250,8 +250,9 @@ export const getPublicInvitation = createServerFn({ method: 'GET' })
         .where(eq(invitations.slug, data.slug))
         .limit(1)
     } catch (e) {
-      const msg = e instanceof Error ? `${e.name}: ${e.message}` : String(e)
-      throw new Error(`DB query failed for slug "${data.slug}": ${msg}`)
+      const any = e as any
+      const parts = [any?.name, any?.message, any?.code, any?.detail, any?.cause?.message]
+      throw new Error(`DB err: ${JSON.stringify(parts.filter(Boolean))}`)
     }
     if (inv.length === 0 || inv[0].status !== 'published') {
       return null
