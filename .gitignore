@@ -1,0 +1,9 @@
+node_modules/
+.env*
+! .env.example
+graphify-out/
+dist/
+build/
+.output/
+.vercel/
+.DS_Store

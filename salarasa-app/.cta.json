@@ -1,0 +1,29 @@
+{
+  "projectName": "salarasa-app",
+  "mode": "file-router",
+  "typescript": true,
+  "tailwind": true,
+  "packageManager": "npm",
+  "git": false,
+  "install": false,
+  "intent": true,
+  "addOnOptions": {
+    "drizzle": {
+      "database": "postgresql"
+    }
+  },
+  "includeExamples": false,
+  "envVarValues": {},
+  "routerOnly": false,
+  "version": 1,
+  "framework": "react",
+  "chosenAddOns": [
+    "drizzle",
+    "shadcn",
+    "form",
+    "table",
+    "tanstack-query",
+    "t3env",
+    "eslint"
+  ]
+}
