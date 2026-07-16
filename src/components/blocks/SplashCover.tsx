@@ -22,15 +22,16 @@ export function SplashCoverBlock({
 
   // Kunci scroll body jika undangan belum dibuka
   useEffect(() => {
+    const root = document.body
     if (!opened) {
-      document.body.style.overflow = 'hidden'
+      root.classList.add('splash-locked')
     } else {
-      document.body.style.overflow = 'auto'
+      root.classList.remove('splash-locked')
       // Pastikan saat undangan dibuka, posisinya scroll selalu kembali ke atas sekali saja
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }
     return () => {
-      document.body.style.overflow = 'auto' // cleanup jika komponen di-unmount
+      root.classList.remove('splash-locked') // cleanup jika komponen di-unmount
     }
   }, [opened])
 
