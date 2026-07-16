@@ -27,10 +27,24 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'TanStack Start Starter',
+        title: 'Salarasa Digital Invitation',
       },
     ],
     links: [
+      {
+        rel: 'icon',
+        type: 'image/svg+xml',
+        href: '/favicon.svg',
+      },
+      {
+        rel: 'alternate icon',
+        type: 'image/png',
+        href: '/logo192.png',
+      },
+      {
+        rel: 'apple-touch-icon',
+        href: '/logo192.png',
+      },
       {
         rel: 'stylesheet',
         href: appCss,
