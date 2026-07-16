@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vite dev --port 3000",
     "generate-routes": "tsr generate",
-    "build": "vite build",
+    "build": "nitro build --preset vercel",
     "preview": "vite preview",
     "test": "vitest run",
     "db:generate": "drizzle-kit generate",
