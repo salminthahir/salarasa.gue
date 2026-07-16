@@ -1,4 +1,0 @@
-/Users/macbooksale/Work/Projects/Salarasa/salarasa-app/AGENTS.md
-/Users/macbooksale/Work/Projects/Salarasa/salarasa-app/DEPLOY_GUIDE.md
-/Users/macbooksale/Work/Projects/Salarasa/salarasa-app/README.md
-/Users/macbooksale/Work/Projects/Salarasa/salarasa-app/public/robots.txt
