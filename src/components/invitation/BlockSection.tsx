@@ -63,7 +63,7 @@ export function BlockSection({
       >
         {shapeType !== 'none' ? (
           <div
-            className={`relative w-full shadow-xl flex flex-col items-center justify-center px-6 ${compactShape ? 'pt-16 pb-20' : 'pt-24 pb-28'} ${shapeType}`}
+            className={`relative w-full shadow-xl flex flex-col items-center justify-center px-6 ${compactShape ? 'pt-20 pb-24' : 'pt-28 pb-32'} ${shapeType}`}
             style={{
               backgroundColor: shapeBg,
               color: textColor,
@@ -74,7 +74,7 @@ export function BlockSection({
               <img
                 src="/riqqa-assets/c20cc952-82a0-410e-aa73-134673b36115.png"
                 alt="Frame Atas"
-                className={`w-full ${smallTopFrame ? 'max-w-[160px] -top-3' : 'max-w-[280px] -top-6'} absolute left-1/2 -translate-x-1/2 drop-shadow-md z-20 pointer-events-none select-none transition-all`}
+                className={`w-full ${smallTopFrame ? 'max-w-[140px] -top-8' : 'max-w-[240px] -top-10'} absolute left-1/2 -translate-x-1/2 drop-shadow-md z-20 pointer-events-none select-none transition-all`}
               />
             )}
 
@@ -88,7 +88,7 @@ export function BlockSection({
               <img
                 src="/riqqa-assets/2d1e1862-7dbd-492c-95c8-930ba1660258.png"
                 alt="Frame Bawah"
-                className="w-full max-w-[280px] absolute -bottom-6 left-1/2 -translate-x-1/2 drop-shadow-md z-20 pointer-events-none select-none"
+                className="w-full max-w-[240px] absolute -bottom-10 left-1/2 -translate-x-1/2 drop-shadow-md z-20 pointer-events-none select-none"
               />
             )}
           </div>
