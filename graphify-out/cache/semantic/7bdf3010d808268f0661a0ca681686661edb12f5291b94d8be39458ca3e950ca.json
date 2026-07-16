@@ -1,0 +1,1 @@
+{"nodes": [{"id": "db_index_db", "label": "Database Client Instance", "file_type": "code", "source_file": "salarasa-app/src/db/index.ts", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null, "rationale": "Server-only drizzle ORM client initialized with DATABASE_URL and full schema object."}], "edges": [], "hyperedges": []}
