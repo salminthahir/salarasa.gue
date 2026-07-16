@@ -242,11 +242,17 @@ export const deleteInvitation = createServerFn({ method: 'POST' })
 export const getPublicInvitation = createServerFn({ method: 'GET' })
   .validator(z.object({ slug: z.string() }))
   .handler(async ({ data }) => {
-    const inv = await db
-      .select()
-      .from(invitations)
-      .where(eq(invitations.slug, data.slug))
-      .limit(1)
+    let inv
+    try {
+      inv = await db
+        .select()
+        .from(invitations)
+        .where(eq(invitations.slug, data.slug))
+        .limit(1)
+    } catch (e) {
+      const msg = e instanceof Error ? `${e.name}: ${e.message}` : String(e)
+      throw new Error(`DB query failed for slug "${data.slug}": ${msg}`)
+    }
     if (inv.length === 0 || inv[0].status !== 'published') {
       return null
     }
