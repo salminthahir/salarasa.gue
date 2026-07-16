@@ -29,6 +29,50 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
       {
         title: 'Salarasa Digital Invitation',
       },
+      {
+        name: 'description',
+        content: 'Salarasa — Digital invitation platform for birthdays, weddings & special moments. Create and share your beautiful invitation in minutes.',
+      },
+      {
+        property: 'og:type',
+        content: 'website',
+      },
+      {
+        property: 'og:site_name',
+        content: 'Salarasa',
+      },
+      {
+        property: 'og:title',
+        content: 'Salarasa Digital Invitation',
+      },
+      {
+        property: 'og:description',
+        content: 'Create and share your beautiful digital invitation in minutes.',
+      },
+      {
+        property: 'og:image',
+        content: 'https://www.salarasa.my.id/logo512.png',
+      },
+      {
+        property: 'og:url',
+        content: 'https://www.salarasa.my.id',
+      },
+      {
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+      {
+        name: 'twitter:title',
+        content: 'Salarasa Digital Invitation',
+      },
+      {
+        name: 'twitter:description',
+        content: 'Create and share your beautiful digital invitation in minutes.',
+      },
+      {
+        name: 'twitter:image',
+        content: 'https://www.salarasa.my.id/logo512.png',
+      },
     ],
     links: [
       {
@@ -44,6 +88,10 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
       {
         rel: 'apple-touch-icon',
         href: '/logo192.png',
+      },
+      {
+        rel: 'manifest',
+        href: '/manifest.json',
       },
       {
         rel: 'stylesheet',

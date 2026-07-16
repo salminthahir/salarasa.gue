@@ -9,6 +9,48 @@ export const Route = createFileRoute('/$slug')({
     if (!data) throw notFound()
     return data
   },
+  head: ({ loaderData }) => {
+    const inv = loaderData
+    const heroBlock = inv?.blocks?.find(
+      (b: any) => b.blockType === 'hero',
+    )
+    const biodataBlock = inv?.blocks?.find(
+      (b: any) => b.blockType === 'subject_biodata',
+    )
+    const countdownBlock = inv?.blocks?.find(
+      (b: any) => b.blockType === 'countdown_event',
+    )
+
+    const name =
+      biodataBlock?.config?.fullName || inv?.invitation?.title || 'Salarasa'
+    const subtitle = heroBlock?.config?.subtitle || ''
+    const venue = countdownBlock?.config?.venueName || ''
+    const desc = [subtitle, venue].filter(Boolean).join(' — ')
+    const url = `https://www.salarasa.my.id/${inv?.invitation?.slug || ''}`
+
+    return {
+      meta: [
+        { title: `${name} — Salarasa Invitation` },
+        { name: 'description', content: desc },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'Salarasa' },
+        { property: 'og:title', content: `${name} — Salarasa Invitation` },
+        { property: 'og:description', content: desc },
+        {
+          property: 'og:image',
+          content: 'https://www.salarasa.my.id/logo512.png',
+        },
+        { property: 'og:url', content: url },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: `${name} — Salarasa Invitation` },
+        { name: 'twitter:description', content: desc },
+        {
+          name: 'twitter:image',
+          content: 'https://www.salarasa.my.id/logo512.png',
+        },
+      ],
+    }
+  },
   component: InvitationPage,
 })
 
