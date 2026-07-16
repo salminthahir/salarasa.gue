@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vite dev --port 3000",
     "generate-routes": "tsr generate",
-    "build": "vite build",
+    "build": "nitro build --preset vercel",
     "preview": "vite preview",
     "test": "vitest run",
     "db:generate": "drizzle-kit generate",
@@ -67,6 +67,7 @@
     "dotenv": "^17.3.1",
     "eslint": "^9.20.0",
     "jsdom": "^28.1.0",
+    "nitro": "npm:nitro-nightly@^3.0.1-20260715-190547-7af4fee3",
     "prettier": "^3.8.1",
     "tsx": "^4.21.0",
     "typescript": "^6.0.2",
