@@ -416,6 +416,24 @@ body.invitation-root {
   line-height: 1.65em;
 }
 
+/* ── iOS Safari fixes ───────────────────────────────────────────────── */
+@supports (height: 100dvh) {
+  .min-h-screen,
+  .min-h-\[100dvh\] {
+    min-height: 100dvh;
+  }
+}
+
+/* Prevent pinch-zoom overscale on splash cover backgrounds */
+.invitation-root img,
+.invitation-root .fixed.inset-0 {
+  max-width: 100%;
+}
+
+/* Safe area padding for notch / home indicator on iOS */
+.safe-pt { padding-top: env(safe-area-inset-top); }
+.safe-pb { padding-bottom: env(safe-area-inset-bottom); }
+
 /* ── Arch / Gate shapes ─────────────────────────────────────────────────── */
 
 .arch-round {

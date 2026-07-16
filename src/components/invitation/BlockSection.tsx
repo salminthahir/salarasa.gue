@@ -40,12 +40,11 @@ export function BlockSection({
 
   return (
     <section
-      className={`relative flex flex-col items-center justify-center w-full overflow-hidden px-4 py-16 ${fullViewport ? 'min-h-screen' : ''} ${className}`}
+      className={`relative flex flex-col items-center justify-center w-full overflow-hidden px-4 py-16 bg-cover bg-center ${fullViewport ? 'min-h-[100dvh]' : ''} ${className}`}
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed', // parallax effect texture
       }}
     >
       {/* Optional Dark Overlay for Background Image */}

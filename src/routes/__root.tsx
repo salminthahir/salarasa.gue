@@ -24,7 +24,8 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
       },
       {
         name: 'viewport',
-        content: 'width=device-width, initial-scale=1',
+        content:
+          'width=device-width, initial-scale=1, viewport-fit=cover',
       },
       {
         title: 'Salarasa Digital Invitation',

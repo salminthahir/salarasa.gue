@@ -84,7 +84,7 @@ export function SplashCoverBlock({
       )}
 
       <div
-        className={`fixed inset-0 z-50 transition-all duration-1000 ${opened ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'}`}
+        className={`fixed inset-0 z-50 w-full min-h-[100dvh] transition-all duration-1000 ${opened ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'}`}
       >
         <BlockSection
           theme={theme}
