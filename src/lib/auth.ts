@@ -19,15 +19,19 @@ export const auth = betterAuth({
   baseURL: env.BETTER_AUTH_URL,
   secret: env.BETTER_AUTH_SECRET,
   trustedOrigins: [
-    'http://localhost:3000', 
+    'http://localhost:3000',
     'http://127.0.0.1:3000',
-    'http://0.0.0.0:3000'
-  ],
+    'http://0.0.0.0:3000',
+    env.BETTER_AUTH_URL,
+    'https://salarasa.my.id',
+    'https://www.salarasa.my.id',
+  ].filter(Boolean) as string[],
   advanced: {
     crossSubDomainCookies: {
-      enabled: true
+      enabled: true,
+      domain: '.salarasa.my.id',
     },
-    useSecureCookies: false, // development
+    useSecureCookies: env.NODE_ENV === 'production',
   },
   emailAndPassword: {
     enabled: true,
